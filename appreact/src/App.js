@@ -1,21 +1,29 @@
 import React from 'react';
+//import Header from './Header';
+//import Footer from './Footer';
+//import Form from './Form/Form';
 
-const App = () => {
-  function handleClick(event){
-    console.log(event.target)
-  }
-
-  function handleScroll(event){
-    console.log(event)
-  }
-  window.addEventListener('scroll', handleScroll);
-
-  return (
-    <div style={{height: '200vh'}}>
-      <button onClick={(event) => alert(event.target.innetText)}>Compre Violão.</button>
-    </div>
-    
-  )
+const Titulo = ({ cor, texto }) => {
+  return <h1 style={{ color: cor }}>{texto}</h1>;
 };
 
-export default App
+const App = () => {
+  return (
+    <section>
+      <Titulo texto="Meu Primeiro Título" cor="blue" />
+      <Titulo texto="Meu Segundo Título" cor="red" />
+    </section>
+  );
+};
+
+// const App = () => {
+//   return(
+//     <div>
+//       <Header />
+//       <Form />
+//       <Titulo texto="Minha primeira props" />
+//       <Footer />
+//     </div>
+//   )
+// }
+export default App;
